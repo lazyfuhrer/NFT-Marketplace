@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 export default function Home() {
   return (
     <>
-      <Box>Hello Mars</Box>
+      <Box>Hello Aharna</Box>
     </>
   )
 }
