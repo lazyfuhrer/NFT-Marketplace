@@ -29,8 +29,40 @@ export default function Discover() {
               backgroundClip="text"
               textFillColor="transparent"
       >
-        EXPLORE ✨</Heading>
+        DASHBOARD </Heading>
+
+        <Stack spacing={0} align={'center'} mb={5}>
+            <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+              Bishwarghya Biswas
+            </Heading>
+            
+          </Stack>
+
+          <Stack direction={'row'} justify={'center'} spacing={6}>
+            <Stack spacing={0} align={'center'}>
+              <Text fontWeight={600}>8</Text>
+              <Text fontSize={'lg'} color={'gray.500'}>
+                Assets
+              </Text>
+            </Stack>
+            <Stack spacing={0} align={'center'}>
+              <Text fontWeight={600}>23  ETH</Text>
+              <Text fontSize={'lg'} color={'gray.500'}>
+                Balance
+              </Text>
+            </Stack>
+          </Stack>
         
+
+          <Heading
+        fontWeight={500}
+        fontSize={'2xl'}
+        lineHeight={"500%"}
+        textAlign={[ 'left', 'center' ]}
+       
+             
+      >
+        Trending 🔥 </Heading>
     <Center py={12}>
  
 <Box display="grid" gridGap={2} gridAutoFlow="row dense">

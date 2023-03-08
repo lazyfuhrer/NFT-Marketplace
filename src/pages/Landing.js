@@ -61,7 +61,7 @@ import {
               px={6}
               backgroundImage="linear-gradient(to bottom right,#FFF4D2,#FF0303)"
               _hover={{
-                bg: "#09c6f9",
+                bg: "#FD8A8A",
               }}
             >
               Get Started
