@@ -1,24 +1,40 @@
 {
   "name": "nft-marketplace",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@rainbow-me/rainbowkit": "^0.11.1",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "ethers": "^5.7.2",
+    "framer-motion": "^10.1.0",
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "wagmi": "^0.11.7"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lazyfuhrer/NFT-Marketplace.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Aharna & Biswarghya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lazyfuhrer/NFT-Marketplace/issues"
   },
-  "homepage": "https://github.com/lazyfuhrer/NFT-Marketplace#readme",
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
-    "hardhat": "^2.13.0"
-  }
+  "homepage": "https://github.com/lazyfuhrer/NFT-Marketplace#readme"
 }
