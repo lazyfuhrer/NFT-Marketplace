@@ -10,6 +10,7 @@ import {
     Heading,
     SimpleGrid, Icon,
     Image,
+    Card, CardHeader, CardBody, CardFooter, Divider
   } from '@chakra-ui/react';
 
   const IMAGE1 =
@@ -58,7 +59,7 @@ import {
               bg={"green.400"}
               rounded={"full"}
               px={6}
-              backgroundImage="linear-gradient(to left,#09c6f9,#2F58CD)"
+              backgroundImage="linear-gradient(to bottom right,#FFF4D2,#FF0303)"
               _hover={{
                 bg: "#09c6f9",
               }}
@@ -172,7 +173,7 @@ import {
        
       </Box>
     </Center>
-    
+   
       </Flex>
 
     );
