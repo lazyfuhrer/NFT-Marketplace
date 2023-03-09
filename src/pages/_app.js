@@ -8,7 +8,7 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { polygon, optimism, arbitrum, goerli, polygonMumbai } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import Navbar from '@/components/Navbar';
+import Navbar from 'frontend/src/components/Navbar'
 
 const { chains, provider } = configureChains(
   [polygonMumbai, goerli, polygon, optimism, arbitrum],

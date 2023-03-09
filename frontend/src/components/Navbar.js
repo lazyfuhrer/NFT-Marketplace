@@ -72,15 +72,34 @@ export default function Navbar() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Link as={NextLink} href={"/"}>
-            <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={"heading"}
-              color={useColorModeValue("gray.800", "white")}
-            >
-              Logo
-            </Text>
+                    
+      
+       <Text
+        fontWeight={700}
+        fontSize={'2xl'}
+        
+        textAlign={[ 'left', 'center' ]}
+       
+              color={"#0A14D6"}
+              backgroundImage="linear-gradient(to bottom ,#865DFF,#E2D3FF)"
+              backgroundClip="text"
+              textFillColor="transparent"
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: '30%',
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: 'gray.700',
+                zIndex: -1,
+              }}
+      >
+        P I X E L P O N D</Text>
           </Link>
-
+          
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
