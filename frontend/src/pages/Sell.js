@@ -12,7 +12,6 @@ import {
   InputGroup,
   Textarea,
   FormHelperText,
-  Spacer,
 } from '@chakra-ui/react';
 import { uploadFileToIPFS, uploadJSONToIPFS } from "../../pinata";
 import useMarketplaceContract from 'hooks/useMarketplaceContract';
