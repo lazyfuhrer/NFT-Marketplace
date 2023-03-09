@@ -12,6 +12,7 @@ import {
   InputGroup,
   Textarea,
   FormHelperText,
+  Spacer,
 } from '@chakra-ui/react';
 import { uploadFileToIPFS, uploadJSONToIPFS } from "../../pinata";
 import useMarketplaceContract from 'hooks/useMarketplaceContract';
@@ -92,7 +93,7 @@ export default function multistep() {
         }
     }
 
-    console.log(marketplaceContract)
+    //console.log(marketplaceContract)
 
   return (
     <>
@@ -128,9 +129,10 @@ export default function multistep() {
                         name: e.target.value,
                       })
           }/>
-      
+          
           <FormLabel
             htmlFor="description"
+            mt={'5'}
             fontSize="sm"
             fontWeight="md"
             color="gray.700"
@@ -162,6 +164,7 @@ export default function multistep() {
         
           <FormLabel
             htmlFor="price"
+            mt={'5'}
             fontSize="sm"
             fontWeight="md"
             color="gray.700"
@@ -196,22 +199,16 @@ export default function multistep() {
             />
           </InputGroup>
         
-          <FormLabel htmlFor="image" fontWeight={'normal'}>
+          <FormLabel htmlFor="image" mt={'5'} fontWeight={'normal'}>
             Upload Image
           </FormLabel>
           <Input type={'file'} onChange={OnChangeFile} />
+
           </FormControl>
 
           <Flex mt="6" w="100%" justifyContent="space-between">
             <Flex>
-                <Button
-                    w="7rem"
-                    colorScheme="red"
-                    variant="solid"
-                    onClick={listNFT}>
-                        List NFT
-                </Button>
-                
+                <Button w="7rem" colorScheme="red" variant="solid" onClick={listNFT}>List NFT</Button>
             </Flex>
           </Flex>
       </Box>
