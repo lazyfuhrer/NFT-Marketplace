@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import '@rainbow-me/rainbowkit/styles.css';
 import {
+  darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
@@ -33,7 +34,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider>
       <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider coolMode chains={chains}>
+        <RainbowKitProvider theme={darkTheme()} coolMode chains={chains}>
           <Navbar/>
           <Component {...pageProps} />
         </RainbowKitProvider>
