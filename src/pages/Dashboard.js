@@ -25,7 +25,7 @@ export default function Discover() {
         textAlign={[ 'left', 'center' ]}
        
               color={"#0A14D6"}
-              backgroundImage="linear-gradient(to bottom right,#FBFFB1,#FF0303)"
+              backgroundImage="linear-gradient(to bottom right,#FFF4D2,#5800FF)"
               backgroundClip="text"
               textFillColor="transparent"
       >

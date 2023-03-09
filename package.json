@@ -14,14 +14,17 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@openzeppelin/contracts": "^4.8.2",
     "@rainbow-me/rainbowkit": "^0.11.1",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "ethers": "^5.7.2",
+    "form-data": "^4.0.0",
     "framer-motion": "^10.1.0",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
     "wagmi": "^0.11.7"
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
@@ -38,16 +41,9 @@
   "bugs": {
     "url": "https://github.com/lazyfuhrer/NFT-Marketplace/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/lazyfuhrer/NFT-Marketplace#readme"
-=======
   "homepage": "https://github.com/lazyfuhrer/NFT-Marketplace#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "hardhat": "^2.13.0"
-  },
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.8.2"
   }
->>>>>>> 7869cfd7d089c3dcb539d377df051d67a90bcf90
 }

@@ -55,13 +55,13 @@ import {
           </Text>
             <Stack direction={'row'}>
             <Button
-              colorScheme={"green"}
-              bg={"green.400"}
+              colorScheme={"D09CFA"}
+              bg={"blue.400"}
               rounded={"full"}
               px={6}
-              backgroundImage="linear-gradient(to bottom right,#FFF4D2,#FF0303)"
+              backgroundImage="linear-gradient(to bottom right,#FFF4D2,#5800FF)"
               _hover={{
-                bg: "#FD8A8A",
+                bg: "#D09CFA",
               }}
             >
               Get Started
