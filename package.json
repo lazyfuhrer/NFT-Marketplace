@@ -38,5 +38,16 @@
   "bugs": {
     "url": "https://github.com/lazyfuhrer/NFT-Marketplace/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/lazyfuhrer/NFT-Marketplace#readme"
+=======
+  "homepage": "https://github.com/lazyfuhrer/NFT-Marketplace#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.13.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.2"
+  }
+>>>>>>> 7869cfd7d089c3dcb539d377df051d67a90bcf90
 }
