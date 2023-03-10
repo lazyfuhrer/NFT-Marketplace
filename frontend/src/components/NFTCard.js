@@ -6,7 +6,7 @@ import NextLink from 'next/link'
 
 const NFTCard = (data) => {
   const newTo = {
-    pathname:"/NFTPage/"+data.data.tokenId
+    pathname:"/nfts/"+data.data.tokenId
   }
   const bgColor = useColorModeValue('white', 'gray.700');
   const boxShadowColor = useColorModeValue('lg', 'dark-lg');
