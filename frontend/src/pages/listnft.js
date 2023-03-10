@@ -17,7 +17,7 @@ import { uploadFileToIPFS, uploadJSONToIPFS } from "../../pinata";
 import Marketplaceabi from "../../abi/Marketplaceabi.json"
 import { useRouter } from 'next/router';
 
-export default function ListNFT() {
+export default function Listnft() {
 
     const router = useRouter();
     const [formParams, updateFormParams] = useState({ name: '', description: '', price: ''});
@@ -102,7 +102,7 @@ export default function ListNFT() {
 
   return (
     <>
-    <Box mt={'10'} alignItems="center" display="flex">
+    <Box mt={'20'} alignItems="center" display="flex">
       <Box
         borderWidth="1px"
         rounded="lg"

@@ -57,7 +57,7 @@ export default function Profile () {
         getNFTData(tokenId);
 
         return (
-            <Box className="profileClass" minHeight="100vh">
+            <Box className="profileClass" minHeight="100vh" mt={'20'}>
               <Box className="profileClass">
                 <Box textAlign="center" mt={11} fontSize="2xl" color="white">
                   <Box mb={5}>

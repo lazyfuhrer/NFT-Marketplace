@@ -55,7 +55,7 @@ if(!dataFetched)
     getAllNFTs();
 
     return (
-        <Box>
+        <Box mt={'20'}>
           <Box display="flex" flexDirection="column" alignItems="center" mt={20}>
             <Text fontSize="xl" fontWeight="bold" color="white">
               Top NFTs

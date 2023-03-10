@@ -28,7 +28,7 @@ const NAV_ITEMS = [
   },
   {
     label: "List NFT",
-    href: "/ListNFT"
+    href: "/Listnft"
   },
   {
     label: "Account",
