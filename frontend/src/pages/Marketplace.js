@@ -64,12 +64,12 @@ if(!dataFetched)
             <Text fontSize="xl" fontWeight="bold" color="white">
               Top NFTs
             </Text>
-            <Grid templateColumns="repeat(auto-fill, minmax(250px, 1fr))" gap="4">
-                {data.map((value, index) => {
-                    return <NFTCard data={value} key={index} />;
-                })}
-            </Grid>
           </Box>
+          <Grid templateColumns="repeat(4, minmax(250px, 1fr))" gap="10" m={'10'}>
+            {data.map((value, index) => {
+                return <NFTCard data={value} key={index} />;
+            })}
+          </Grid>
         </Box>
     );
 }
