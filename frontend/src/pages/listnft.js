@@ -67,7 +67,7 @@ export default function listnft() {
         }
     }
 
-    async function listNFT(e) {
+    async function ListNFT(e) {
         e.preventDefault();
 
         //Upload data to IPFS
