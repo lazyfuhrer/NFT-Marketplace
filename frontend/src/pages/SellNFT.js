@@ -71,7 +71,7 @@ export default function SellNFT () {
             alert("Successfully listed your NFT!");
             updateMessage("");
             updateFormParams({ name: '', description: '', price: ''});
-            window.location.replace("/")
+            window.location.replace("/Marketplace")
         }
         catch(e) {
             alert( "Upload error"+e )
