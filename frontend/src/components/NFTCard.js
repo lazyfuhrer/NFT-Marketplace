@@ -34,7 +34,7 @@ const NFTCard = (data) => {
         cursor="pointer"
       >
         <Box position="relative">
-          <Image src={data.data.image} alt={data.data.name} h="200px" w="100%" objectFit="cover" />
+          <Image crossOrigin='anonymous' src={data.data.image} alt={data.data.name} h="200px" w="100%" objectFit="cover" />
           <Flex
             justify="flex-end"
             position="absolute"

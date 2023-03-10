@@ -28,7 +28,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Upload",
-    href: "/SellNFT"
+    href: "/ListNFT"
   },
   {
     label: "Profile",

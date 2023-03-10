@@ -14,11 +14,11 @@ import {
   FormHelperText,
 } from '@chakra-ui/react';
 import { uploadFileToIPFS, uploadJSONToIPFS } from "../../pinata";
-import useMarketplaceContract from 'hooks/useMarketplaceContract';
+import Marketplaceabi from "../../abi/Marketplaceabi.json"
 
-export default function multistep() {
+export default function Sell() {
 
-    const marketplaceContract = useMarketplaceContract();
+    //const marketplaceContract = useMarketplaceContract();
     const [formParams, updateFormParams] = useState({ name: '', description: '', price: ''});
     const [fileURL, setFileURL] = useState(null);
     const ethers = require("ethers");
@@ -70,23 +70,30 @@ export default function multistep() {
 
         //Upload data to IPFS
         try {
-            const metadataURL = await uploadMetadataToIPFS();
-            updateMessage("Please wait.. uploading (upto 5 mins)")
+          const metadataURL = await uploadMetadataToIPFS();
+          //After adding your Hardhat network to your metamask, this code will get providers and signers
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const signer = provider.getSigner();
+          updateMessage("Please wait.. uploading (upto 5 mins)")
 
-            //massage the params to be sent to the create NFT request
-            const price = ethers.utils.parseUnits(formParams.price, 'ether')
-            let listingPrice = await marketplaceContract.getListPrice()
-            listingPrice = listingPrice.toString()
+          //Pull the deployed contract instance
+          let contract = new ethers.Contract("0xc49e0E80aF12a0937881461609b6EFFe3fFb977B", Marketplaceabi, signer)
+          console.log(contract)
 
-            //actually create the NFT
-            let transaction = await marketplaceContract.createToken(metadataURL, price, { value: listingPrice })
-            await transaction.wait()
+          //massage the params to be sent to the create NFT request
+          const price = ethers.utils.parseUnits(formParams.price, 'ether')
+          let listingPrice = await contract.getListPrice()
+          listingPrice = listingPrice.toString()
 
-            alert("Successfully listed your NFT!");
-            updateMessage("");
-            updateFormParams({ name: '', description: '', price: ''});
-            window.location.replace("/")
-        }
+          //actually create the NFT
+          let transaction = await contract.createToken(metadataURL, price, { value: listingPrice })
+          await transaction.wait()
+
+          alert("Successfully listed your NFT!");
+          updateMessage("");
+          updateFormParams({ name: '', description: '', price: ''});
+          window.location.replace("/")
+      }
         catch(e) {
             alert( "Upload error"+e )
         }
