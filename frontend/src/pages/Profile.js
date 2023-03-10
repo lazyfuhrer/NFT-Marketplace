@@ -89,7 +89,7 @@ export default function Profile () {
                   </Box>
                 </Box>
                 <Box textAlign="center" alignItems="center" mt={11} color="white">
-                  <Text fontWeight="bold">My NFT Collections</Text>
+                  <Text fontWeight="bold" fontSize={'35px'}>My NFT Collections</Text>
                   <Box display="flex" justifyContent="center" flexWrap="wrap" maxWidth="screen-xl">
                     <Grid templateColumns="repeat(4, minmax(250px, 1fr))" gap="10" m={'10'}>
                       {data.map((value, index) => {
