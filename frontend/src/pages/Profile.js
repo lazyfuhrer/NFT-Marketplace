@@ -1,8 +1,6 @@
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import { useState } from "react";
-//import NFTTile from "../components/NFTTile"
-//import useMarketplaceContract from "hooks/useMarketplaceContract";
 import Marketplaceabi from "../../abi/Marketplaceabi.json"
 import { Box, Grid, Text } from '@chakra-ui/react';
 import NFTCard from '@/components/NFTCard';
