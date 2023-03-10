@@ -33,10 +33,6 @@ const NAV_ITEMS = [
   {
     label: "Account",
     href: "/Profile"
-  },
-  {
-    label: "About Us",
-    href: "/"
   }
 ]
 

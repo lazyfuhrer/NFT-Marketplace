@@ -6,7 +6,7 @@ import { Box, Grid, Text } from '@chakra-ui/react';
 import NFTCard from '@/components/NFTCard';
 
 export default function Profile () {
-    //const marketplaceContract = useMarketplaceContract();
+   
     const [data, updateData] = useState([]);
     const [dataFetched, updateFetched] = useState(false);
     const [address, updateAddress] = useState("0x");
@@ -15,21 +15,16 @@ export default function Profile () {
     async function getNFTData(tokenId) {
       const ethers = require("ethers");
       let sumPrice = 0;
-      //After adding your Hardhat network to your metamask, this code will get providers and signers
+     
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const addr = await signer.getAddress();
 
-      //Pull the deployed contract instance
+     
       let contract = new ethers.Contract("0xc49e0E80aF12a0937881461609b6EFFe3fFb977B", Marketplaceabi, signer)
 
-      //create an NFT Token
+      
       let transaction = await contract.getMyNFTs()
-
-      /*
-      * Below function takes the metadata from tokenURI and the data returned by getMyNFTs() contract function
-      * and creates an object of information that is to be displayed
-      */
       
       const items = await Promise.all(transaction.map(async i => {
           const tokenURI = await contract.tokenURI(i.tokenId);

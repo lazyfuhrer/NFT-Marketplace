@@ -24,14 +24,11 @@ export default function ListNFT() {
     const [fileURL, setFileURL] = useState(null);
     const ethers = require("ethers");
     const [message, updateMessage] = useState('');
-    //const location = useLocation();
-
-    //This function uploads the NFT image to IPFS
+    
     async function OnChangeFile(e) {
         var file = e.target.files[0];
-        //check for file extension
         try {
-            //upload the file to IPFS
+            
             const response = await uploadFileToIPFS(file);
             if(response.success === true) {
                 console.log("Uploaded image to Pinata: ", response.pinataURL)
@@ -43,10 +40,10 @@ export default function ListNFT() {
         }
     }
 
-    //This function uploads the metadata to IPFS
+    
     async function uploadMetadataToIPFS() {
         const {name, description, price} = formParams;
-        //Make sure that none of the fields are empty
+       
         if( !name || !description || !price || !fileURL)
             return;
 
@@ -55,7 +52,7 @@ export default function ListNFT() {
         }
 
         try {
-            //upload the metadata JSON to IPFS
+            
             const response = await uploadJSONToIPFS(nftJSON);
             if(response.success === true){
                 console.log("Uploaded JSON to Pinata: ", response)
@@ -70,23 +67,23 @@ export default function ListNFT() {
     async function listNFT(e) {
         e.preventDefault();
 
-        //Upload data to IPFS
+        
         try {
             const metadataURL = await uploadMetadataToIPFS();
-            //After adding your Hardhat network to your metamask, this code will get providers and signers
+           
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();
             updateMessage("Please wait.. uploading (upto 5 mins)")
 
-            //Pull the deployed contract instance
+           
             let contract = new ethers.Contract("0xc49e0E80aF12a0937881461609b6EFFe3fFb977B", Marketplaceabi, signer)
 
-            //massage the params to be sent to the create NFT request
+           
             const price = ethers.utils.parseUnits(formParams.price, 'ether')
             let listingPrice = await contract.getListPrice()
             listingPrice = listingPrice.toString()
 
-            //actually create the NFT
+            
             let transaction = await contract.createToken(metadataURL, price, { value: listingPrice })
             await transaction.wait()
 
