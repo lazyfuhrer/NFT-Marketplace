@@ -75,7 +75,12 @@ export default function Work() {
           <Text>
             Seller: <Box as="span" fontSize="sm">{data.seller}</Box>
           </Text>
+          <Text>
+            Current addr: <Box as="span" fontSize="sm">{currAddress}</Box>
+          </Text>
           {currAddress == data.owner || currAddress == data.seller ? (
+            <Text color="emerald.700">You are the owner of this NFT</Text>
+          ) : (
             <Button
               bg="blue.500"
               _hover={{ bg: "blue.700" }}
@@ -89,8 +94,6 @@ export default function Work() {
             >
               Buy this NFT
             </Button>
-          ) : (
-            <Text color="emerald.700">You are the owner of this NFT</Text>
           )}
           <Text color="green" textAlign="center" mt={3}>
             {message}
