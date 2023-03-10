@@ -17,7 +17,7 @@ import { uploadFileToIPFS, uploadJSONToIPFS } from "../../pinata";
 import Marketplaceabi from "../../abi/Marketplaceabi.json"
 import { useRouter } from 'next/router';
 
-export default function listnft() {
+export default function ListNFT() {
 
     const router = useRouter();
     const [formParams, updateFormParams] = useState({ name: '', description: '', price: ''});
@@ -67,7 +67,7 @@ export default function listnft() {
         }
     }
 
-    async function ListNFT(e) {
+    async function listNFT(e) {
         e.preventDefault();
 
         //Upload data to IPFS
