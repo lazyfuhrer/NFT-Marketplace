@@ -12,6 +12,7 @@ import {
     Image,
     Card, CardHeader, CardBody, CardFooter, Divider
   } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
   const IMAGE1 =
   'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/f187cf123542479.611f0bf0ccac8.jpg';
@@ -19,10 +20,10 @@ import {
   const IMAGE2 =
   'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b0e4f2123542479.60f0519010164.jpg';
   export default function Landing() {
+
+    const router = useRouter()
+
     return (
-        
-
-
       <Flex
         w={'full'}
         h={'100vh'}
@@ -63,16 +64,13 @@ import {
               _hover={{
                 bg: "#FD8A8A",
               }}
+              onClick={() => {
+                router.push('/Marketplace')
+              }}
             >
               Get Started
             </Button>
-              <Button
-                bg={'whiteAlpha.300'}
-                rounded={'full'}
-                color={'white'}
-                _hover={{ bg: 'whiteAlpha.500' }}>
-                Show me more
-              </Button>
+              
             </Stack>
             
           </Stack>
