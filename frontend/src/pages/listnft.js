@@ -15,9 +15,11 @@ import {
 } from '@chakra-ui/react';
 import { uploadFileToIPFS, uploadJSONToIPFS } from "../../pinata";
 import Marketplaceabi from "../../abi/Marketplaceabi.json"
+import { useRouter } from 'next/router';
 
-export default function Upload() {
+export default function listnft() {
 
+    const router = useRouter();
     const [formParams, updateFormParams] = useState({ name: '', description: '', price: ''});
     const [fileURL, setFileURL] = useState(null);
     const ethers = require("ethers");
@@ -91,7 +93,7 @@ export default function Upload() {
             alert("Successfully listed your NFT!");
             updateMessage("");
             updateFormParams({ name: '', description: '', price: ''});
-            window.location.replace("/Marketplace")
+            router.push('/Profile');
         }
         catch(e) {
             alert( "Upload error"+e )
@@ -126,7 +128,7 @@ export default function Upload() {
 
       <FormControl mr="5%">
         <FormLabel htmlFor="name" fontWeight={'normal'}>
-            NFT Name
+          Name
         </FormLabel>
         <Input id="name" placeholder="Axie#4563" onChange={e => updateFormParams({...formParams, name: e.target.value})} value={formParams.name} />
       </FormControl>
@@ -141,11 +143,11 @@ export default function Upload() {
             _dark={{
               color: 'gray.50',
             }}>
-            NFT Description
+              Description
           </FormLabel>
           <Textarea
             id="description"
-            placeholder="you@example.com"
+            placeholder="cyberpunk bored ape"
             rows={3}
             shadow="sm"
             focusBorderColor="brand.400"
@@ -184,7 +186,7 @@ export default function Upload() {
             <Input
               type="number"
               step={'0.01'}
-              placeholder="min 0.01"
+              placeholder="Minimum 0.01"
               focusBorderColor="brand.400"
               rounded="md"
               value={formParams.price} onChange={e => updateFormParams({...formParams, price: e.target.value})}
@@ -203,7 +205,7 @@ export default function Upload() {
 
       <Flex w="100%" mt="6" justifyContent="space-between">
         <Button
-          w="7rem"
+          w="full"
           colorScheme="red"
           variant="solid"
           onClick={listNFT}>

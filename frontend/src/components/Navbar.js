@@ -27,11 +27,11 @@ const NAV_ITEMS = [
     href: "/Marketplace"
   },
   {
-    label: "Upload",
-    href: "/ListNFT"
+    label: "List NFT",
+    href: "/listnft"
   },
   {
-    label: "Profile",
+    label: "Account",
     href: "/Profile"
   },
   {
