@@ -83,7 +83,6 @@ export default function Navbar() {
               color={"#0A14D6"}
               backgroundImage="linear-gradient(to bottom ,#865DFF,#E2D3FF)"
               backgroundClip="text"
-              textFillColor="transparent"
               as={'span'}
               position={'relative'}
               _after={{
