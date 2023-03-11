@@ -87,7 +87,7 @@ export default function Work() {
           <Text>Name: {data.name}</Text>
           <Text>Description: {data.description}</Text>
           <Text>
-            Price: <Box as="span">{data.price} ETH</Box>
+            Price: <Box as="span">{data.price} MATIC</Box>
           </Text>
           <Text>
             Owner: <Box as="span" fontSize="sm">{data.owner}</Box>

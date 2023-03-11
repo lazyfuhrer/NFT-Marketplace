@@ -11,7 +11,7 @@ export default function Marketplace() {
         "description": "NFT",
         "website":"http://axieinfinity.io",
         "image":"https://gateway.pinata.cloud/ipfs/QmTsRJX7r5gyubjkdmzFrKQhHv74p5wT9LdeF1m3RTqrE5",
-        "price":"0.03ETH",
+        "price":"0.03",
         "currentlySelling":"True",
         "address":"0xc49e0E80aF12a0937881461609b6EFFe3fFb977B",
     },
