@@ -70,6 +70,7 @@ export const uploadFileToIPFS = async(file) => {
         .post(url, data, {
             maxBodyLength: 'Infinity',
             headers: {
+                'Accept': 'text/plain',
                 'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
                 pinata_api_key: key,
                 pinata_secret_api_key: secret,
